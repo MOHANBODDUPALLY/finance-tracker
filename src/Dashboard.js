@@ -35,7 +35,7 @@ function Dashboard() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/transactions/summary/1")
+    fetch("https://finance-tracker-w2fi.onrender.com/api/transactions/summary/1")
       .then((res) => res.json())
       .then((data) => setSummary(data));
   }, []);
@@ -62,7 +62,7 @@ function Dashboard() {
   };
 
   const handleSubmit = () => {
-    fetch("http://localhost:8080/api/transactions", {
+    fetch("https://finance-tracker-w2fi.onrender.com/api/transactions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
